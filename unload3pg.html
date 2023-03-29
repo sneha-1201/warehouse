@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>qZense Labs</title>
+    <style>
+    .circle {
+        background: #fff;
+        border-radius: 40%;
+         border: 3px solid #000;
+         color: #000;
+         text-align: center;
+         font: 32px Arial, sans-serif;
+       }
+
+       .oval {
+
+        width: 40%;
+        height:150%;
+        background-color: rgb(157, 231, 201);
+        border-radius: 20%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+
+    
+       }    
+
+       .gfg {
+            margin: 3%;
+            position: relative;
+        }
+
+        
+        .form1{
+            position: absolute;
+            top:90%;
+            bottom:20%;
+            left: 45%;
+
+        }
+        .input{
+        
+            top:20%;
+            bottom:15%;
+            left:30%;
+        }
+
+        xyz {
+            display : table-cell;
+            vertical-align: middle;
+        }
+     </style>
+</head>
+<body style="background-color: white;">
+
+        <center>
+        <img src="https://mybucketwarehouse.s3.ap-south-1.amazonaws.com/logo.jpg" width="25%" height="15%" class="cl1">
+        </center>
+
+        <div class="gfg">
+           
+            <h3 class="oval">
+                <xyz>
+                <b>To complete Unloading</b>
+                <br>Click the picture with consignment </xyz>
+                <div id="root6"></div>
+                    <script src="templates/js/vehiclenumber.js"></script>
+            </h3>
+
+
+            <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular.min.js"></script>
+          
+        </div>
+        <center><input class="input " type="file" accept="image/*;capture=camera"  ></center>
+
+        <div class="form1">
+        <a href="unload4pg.html"><button class="button" >submit </button>
+            </button></a></div>
+
+            <script >
+                
+            
+            let input = document.querySelector(".input");
+            let button = document.querySelector(".button");
+            
+            button.disabled = true; //setting button state to disabled
+            
+            input.addEventListener("change", stateHandle);
+            
+            function stateHandle() {
+                if (document.querySelector(".input").value === "") {
+                    button.disabled = true; //button remains disabled
+                } else {
+                    button.disabled = false; //button is enabled
+                }
+            }
+            </script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

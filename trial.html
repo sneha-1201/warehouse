@@ -1,0 +1,38 @@
+<script>
+import React, { useState } from 'react';
+import axios from 'axios';
+
+function ImageUploader() {
+  const [selectedFile, setSelectedFile] = useState(null);
+
+  const handleFileInput = (event) => {
+    setSelectedFile(event.target.files[0]);
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const formData = new FormData();
+    formData.append('image', selectedFile);
+
+    try {
+      const response = await axios.post('/api/upload', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+      console.log(response.data);
+      // Display the model's result on the specific frontend page
+    } catch (error) {
+      console.error(error);
+
+    }
+};
+</script>
+
+return (
+  <form onSubmit={handleSubmit}>
+    <input type="file" onChange={handleFileInput} />
+    <button type="submit">Upload</button>
+  </form>
+)
